@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FX CAM by Alif</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.8.0/dist/tf.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface@0.0.7/dist/blazeface.min.js"></script>
+  </head>
+<body class="m-0 p-0 overflow-hidden bg-black">
+  <div class="relative w-screen h-screen bg-black">
+    <video
+      id="webcam"
+      autoplay
+      muted
+      playsinline
+      class="absolute top-0 left-0 w-full h-full"
+      style="transform: none;"
+    ></video>
+    <canvas
+      id="overlay"
+      class="absolute top-0 left-0 w-full h-full"
+      width="0"
+      height="0"
+    ></canvas>
+    <div
+      id="detectedText"
+      class="absolute top-4 left-4 bg-black bg-opacity-50 text-white rounded-md px-3 py-1 text-sm font-bold select-none"
+    >
+      Wajah Terdeteksi !!!
+    </div>
+    <div
+      id="infoBox"
+      class="absolute bg-black bg-opacity-50 text-white rounded-md px-2 py-1 text-xs font-semibold select-none pointer-events-none"
+      style="display:none;"
+    >
+      <div id="name">Name: Alif</div>
+      <div id="age">Age: 15</div>
+    </div>
+  </div>
+  </script>
+</body>
+</html>
